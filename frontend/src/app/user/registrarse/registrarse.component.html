@@ -1,23 +1,45 @@
-<section>
-    <h1>Bienvenido</h1>
-    <figure>
-        <img src="frontend\src\assets\logo\logo-palta.png" alt="">
-    </figure>
+<section class="register-section">
+    <div class="resister-container">
+        <h1 class="register-title">Bienvenido</h1>
+        <figure>
+            <img class="logo-img" src="../../../assets/logo/logo-palta.png" alt="logo de la app">
+        </figure>
+        <div>
+            <p class="register-leyend">¡Regístrate ahora para unirte a esta creciente comunidad culinaria y disfrutar de miles de recetas!</p>
+        </div>
+        <form>
+            <div class="register-container-input">
+                <input type="text" formControlName="nombreCompleto" placeholder="Nombre Completo">
+                <!-- <div *ngIf="f.nombreCompleto.errors?.required">Nombre Completo es requerido</div> -->          
+            </div>
+            <div class="register-container-input">
+                <input type="email" formControlName="email" placeholder="Email">
+                <!--  <div *ngIf="f.email.errors?.required">Email es requerido</div>
+                 <div *ngIf="f.email.errors?.email">Email inválido</div> -->
+            </div>
+            <div class="register-container-input">
+                <input type="password" formControlName="contraseña" placeholder="Contraseña">
+                <!--  <div *ngIf="f.contraseña.errors?.required">Contraseña es requerida</div>
+                 <div *ngIf="f.contraseña.errors?.minlength">La contraseña debe tener al menos 6 caracteres</div>
+              -->
+            </div>          
+           <div class="btn-container">
+            <button class="btn-register" type="submit">Registrate</button>
+           </div>            
+            <div class="span-container">
+                <span class="span-register">Al registrarte aceptas nuestras Condiciones y la Política de privacidad.</span>
+            </div>
+        </form>
+    </div>  
     <div>
-        <p>¡Regístrate ahora para unirte a esta creciente comunidad culinaria y disfrutar de miles de recetas!</p>
+        <div>
+            <p>¿Tienes una cuenta?</p>
+            <a href="">Entrar</a>
+        </div>
+    </div> 
+    <div>
+        <div>
+            <p>Descarga la aplicación</p>
+        </div>
     </div>
-    <!-- <form [formGroup]="registroForm" (ngSubmit)="onSubmit()">
-        <input type="text" formControlName="nombreCompleto" placeholder="Nombre Completo">
-        <div *ngIf="f.nombreCompleto.errors?.required">Nombre Completo es requerido</div>
-      
-        <input type="email" formControlName="email" placeholder="Email">
-        <div *ngIf="f.email.errors?.required">Email es requerido</div>
-        <div *ngIf="f.email.errors?.email">Email inválido</div>
-      
-        <input type="password" formControlName="contraseña" placeholder="Contraseña">
-        <div *ngIf="f.contraseña.errors?.required">Contraseña es requerida</div>
-        <div *ngIf="f.contraseña.errors?.minlength">La contraseña debe tener al menos 6 caracteres</div>
-      
-        <button type="submit">Registrarse</button>
-    </form> -->
 </section>

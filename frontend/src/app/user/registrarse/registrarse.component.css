@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+.register-section{
+    padding: 40px;
+}
+
+.resister-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #B8E092;
+    padding: 15px;
+}
+
+.register-title{
+    font-family: "Sacramento", cursive;
+    font-weight: 400;
+    text-align: center;
+    font-size: 2.8rem;
+}
+
+.logo-img{
+    width: 100%;
+    height: auto;
+}
+
+.register-leyend{
+    padding: 10px 0;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.register-container-input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.register-container-input input{
+    padding: 15px;
+    background-color: #D9D9D9;
+    border: none;
+    width: 100%;
+}
+.register-container-input input::placeholder{
+    color: #6D6868;
+}
+
+.btn-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+.btn-register{
+    width: 137px;
+    height: 45px;
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 20px;
+    color:  #FDFFEB;
+    background-color: #B8E092;
+    border: none;
+}
+
+.span-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+.span-register{
+    text-align: center;
+    font-size: 0.8rem;
+}

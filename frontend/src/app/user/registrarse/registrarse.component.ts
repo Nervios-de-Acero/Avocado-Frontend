@@ -9,10 +9,10 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrl: './registrarse.component.css'
 })
 export class RegistrarseComponent implements OnInit {
-  
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
-  }
+    ngOnInit(): void {
+      throw new Error('Method not implemented.');
+    };
+
   /* registroForm: FormGroup;
 
   constructor(private formBuilder: FormBuilder) { }
