@@ -10,6 +10,7 @@ import { User, UserDTO } from '../../model/user.model';
   templateUrl: './registrarse.component.html',
   styleUrl: './registrarse.component.css'
 })
+
 export class RegistrarseComponent {
 
 
@@ -36,7 +37,7 @@ export class RegistrarseComponent {
   // }
 
   createUser(){
-    
+
     this.userService.create();
   }
 
