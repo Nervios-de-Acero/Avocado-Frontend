@@ -1,6 +1,6 @@
 import { Injectable, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { User } from '../model/user.model';
+import { User, UserDTO } from '../model/user.model';
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +12,7 @@ export class UserService {
 
   constructor() {}
 
-  create(data: User){
-    return this.http.post<User>(this.apiUrl, data);
+  create(data: UserDTO){
+    return this.http.post<UserDTO>(this.apiUrl, data);
   }
 }

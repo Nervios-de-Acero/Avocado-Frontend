@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UserService } from '../../services/user.service';
+import { User, UserDTO } from '../../model/user.model';
 
 @Component({
   selector: 'app-registrarse',
@@ -8,27 +10,34 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   templateUrl: './registrarse.component.html',
   styleUrl: './registrarse.component.css'
 })
-export class RegistrarseComponent implements OnInit {
-  
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
+export class RegistrarseComponent {
+
+
+  // registroForm: FormGroup;
+
+  constructor(
+    private formBuilder: FormBuilder,
+    private userService: UserService
+  )
+  { }
+
+  // ngOnInit(): void {
+  //   this.registroForm = this.formBuilder.group({
+  //     nombreCompleto: ['', Validators.required],
+  //     email: ['', [Validators.required, Validators.email]],
+  //     contraseña: ['', [Validators.required, Validators.minLength(6)]]
+  //   });
+  // }
+
+  // get f() { return this.registroForm.controls; }
+
+  // onSubmit() {
+  //   console.log(this.registroForm.value);
+  // }
+
+  createUser(){
+    
+    this.userService.create();
   }
-  /* registroForm: FormGroup;
-
-  constructor(private formBuilder: FormBuilder) { }
-
-  ngOnInit(): void {
-    this.registroForm = this.formBuilder.group({
-      nombreCompleto: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]],
-      contraseña: ['', [Validators.required, Validators.minLength(6)]]
-    });
-  }
-
-  get f() { return this.registroForm.controls; }
-
-  onSubmit() {
-    console.log(this.registroForm.value);
-  } */
 
 }
