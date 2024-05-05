@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
-
 @Component({
-  selector: 'app-registrarse-component',
+  selector: 'app-registrarse',
   standalone: true,
   imports: [],
-  templateUrl: './registrarse-component.component.html',
-  styleUrl: './registrarse-component.component.css'
+  templateUrl: './registrarse.component.html',
+  styleUrl: './registrarse.component.css'
 })
-export class RegistrarseComponentComponent implements OnInit {
+export class RegistrarseComponent implements OnInit {
+  
   ngOnInit(): void {
     throw new Error('Method not implemented.');
   }
@@ -30,4 +30,5 @@ export class RegistrarseComponentComponent implements OnInit {
   onSubmit() {
     console.log(this.registroForm.value);
   } */
+
 }
