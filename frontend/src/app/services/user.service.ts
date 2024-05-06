@@ -12,7 +12,16 @@ export class UserService {
 
   constructor() {}
 
-  create(data: UserDTO){
+  crearUser(data: UserDTO){
     return this.http.post<UserDTO>(this.apiUrl, data);
   }
+
+  actualizarUser(id: number, data: UserDTO){
+    return this.http.post<UserDTO>( `${this.apiUrl}/${id}`, data);
+  }
+
+  eliminarUser(id: number){
+    return this.http.delete(`${this.apiUrl}/${id}`)
+  }
+
 }
