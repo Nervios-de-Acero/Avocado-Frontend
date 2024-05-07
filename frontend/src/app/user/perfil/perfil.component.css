@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+
+.section-perfil{
+    padding: 40px;
+}
+
+.title-perfil{
+    font-family: "Sacramento", cursive;
+    text-align: center;
+    padding: 40px;
+    font-size: 2rem;
+}
+
+.container-img-user{
+    display: flex;
+    justify-content: center;
+}
+.user-img-container{
+    width: 120px;
+    height: 120px; 
+}
+.img-user{
+    width: 100%;
+    height: auto;
+    border-radius: 100%;
+}
+
+.container-data{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0 50px 0;
+}
+.userName-data{
+    display: flex;
+    flex-direction: column;
+}
+.nameUser, .userName{
+    padding: 10px 0;
+    font-weight: 700;
+}
+.editar-icons{
+    display: flex;
+    flex-direction: column;
+}
+.icon-pen{
+    width: 35px;
+    height: 35px;
+    transition: transform 0.3s ease;
+}
+.icon-pen:hover{
+   cursor: pointer;
+   transform: translateY(-10px);
+}
+
+.input-container{
+    padding: 30px 0;
+}
+
+.group-container-password{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icon-eye-container{
+    padding-top: 10px;
+}
+
+.icon-change-password{
+    opacity: 0.3;
+}
