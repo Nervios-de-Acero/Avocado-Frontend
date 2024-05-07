@@ -6,6 +6,7 @@
 }
 
 
+
 .register-section{
     display: flex;
     flex-direction: column;
@@ -47,6 +48,7 @@
 
 .register-container-input{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 10px;
@@ -56,6 +58,15 @@
     background-color: #D9D9D9;
     border: none;
     width: 100%;
+
+    &.is-valid{
+      border: 2px solid #B8E092;
+    }
+
+      &.is-invalid{
+        border: 2px solid red;
+      }
+
 }
 .register-container-input input::placeholder{
     color: #6D6868;
@@ -212,7 +223,7 @@
 @media (min-width: 768px) {
     .register-container{
         width: 450px;
-    } 
+    }
     .login-container{
         width: 450px;
     }
@@ -229,7 +240,7 @@
    .container-icon{
     display: flex;
    }
-   
+
    .section-contacto{
     align-items: flex-end;
    }

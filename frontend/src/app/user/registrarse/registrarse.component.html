@@ -9,17 +9,19 @@
         </div>
         <form [formGroup]="registroForm" (ngSubmit)="onSubmit()">
             <div class="register-container-input">
-                <input type="text" class="controls" name="nombreCompleto" formControlName="nombreCompleto" placeholder="Nombre Completo" [class.border-danger]="esInvalido('first_name')">
-                <div
-                *ngIf="registroForm.nombreCompleto.invalid && (registroForm.controls.nombreCompleto.valid || registroForm.controls.nombreCompleto.touched)"
-                class="alert-danger">
-                <div *ngIf="registroForm.controls.nombreCompleto.errors?.['required']">
-                  el nombre es requerido
+                <input type="text" [class.is-invalid]="nombreCompleto?.touched && nombreCompleto?.invalid" [class.is-valid]="nombreCompleto?.touched && nombreCompleto?.valid" name="nombreCompleto" formControlName="nombreCompleto" placeholder="Nombre Completo">
+                <br>
+                <span *ngIf="nombreCompleto?.hasError('required')">Si es un span la bloqueo a Aylen</span>
+
+                <!-- <div *ngIf="nombreCompleto?.touched && nombreCompleto?.hasError('minlength')">
+                  el nombre debe tener al menos 5 letras
                 </div>
-                <div *ngIf="registroForm.controls.nombreCompleto.errors?.['minlength']">
-                  el nombre debe tener al menos 3 letras
+                <div *ngIf="nombreCompleto?.touched && nombreCompleto?.hasError('manlength')">
+                  el nombre debe tener como maximo 50 letras
                 </div>
-                <!-- <div *ngIf="f.nombreCompleto.errors?.required">Nombre Completo es requerido</div> -->
+                <div *ngIf="nombreCompleto?.touched && nombreCompleto?.hasError('pattern')">
+                  el nombre debe tener solo letras
+                </div> -->
             </div>
             <div class="register-container-input">
                 <input type="email" formControlName="email" placeholder="Email">

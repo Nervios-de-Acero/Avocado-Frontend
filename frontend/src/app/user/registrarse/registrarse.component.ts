@@ -20,9 +20,9 @@ export class RegistrarseComponent {
   constructor(private formBuilder: FormBuilder, private userService: UserService){
     this.registroForm = this.formBuilder.group({
       nombreCompleto: ['',[Validators.required, Validators.maxLength(50), Validators.minLength(5), Validators.pattern(/^[a-zA-Z\sñÑáéíóúÁÉÍÓÚ]+$/)]],
-      usuario: ['',[Validators.required, Validators.maxLength(20), Validators.minLength(6), Validators.pattern(/^[a-zA-Z\sñÑáéíóúÁÉÍÓÚ]+$/)]],
+      usuario: ['',[Validators.required, Validators.maxLength(20), Validators.minLength(6), Validators.pattern(/^[a-zA-Z0-9!@#$%^&*()_+{}|:<>?]+$/)]],
       email: ['',[Validators.required, Validators.minLength(6), Validators.email]],
-      contrasenia: ['', [Validators.required, Validators.minLength(8), Validators.pattern(/^(?=.*[A-Z])(?=.*\d)$/)]]
+      contrasenia: ['', [Validators.required, Validators.minLength(8), Validators.pattern(/^(?=.*[A-Z])(?=.*[0-9])[\w\W]{8,}$/)]]
     });
   }
 
