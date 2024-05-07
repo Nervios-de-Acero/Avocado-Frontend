@@ -7,10 +7,19 @@
         <div>
             <p class="register-leyend">¡Regístrate ahora para unirte a esta creciente comunidad culinaria y disfrutar de miles de recetas!</p>
         </div>
-        <form>
+        <form [formGroup]="registroForm" (ngSubmit)="onSubmit()">
             <div class="register-container-input">
-                <input type="text" formControlName="nombreCompleto" placeholder="Nombre Completo">
-                <!-- <div *ngIf="f.nombreCompleto.errors?.required">Nombre Completo es requerido</div> -->          
+                <input type="text" class="controls" name="nombreCompleto" formControlName="nombreCompleto" placeholder="Nombre Completo" [class.border-danger]="esInvalido('first_name')">
+                <div
+                *ngIf="registroForm.nombreCompleto.invalid && (registroForm.controls.nombreCompleto.valid || registroForm.controls.nombreCompleto.touched)"
+                class="alert-danger">
+                <div *ngIf="registroForm.controls.nombreCompleto.errors?.['required']">
+                  el nombre es requerido
+                </div>
+                <div *ngIf="registroForm.controls.nombreCompleto.errors?.['minlength']">
+                  el nombre debe tener al menos 3 letras
+                </div>
+                <!-- <div *ngIf="f.nombreCompleto.errors?.required">Nombre Completo es requerido</div> -->
             </div>
             <div class="register-container-input">
                 <input type="email" formControlName="email" placeholder="Email">
@@ -22,21 +31,21 @@
                 <!--  <div *ngIf="f.contraseña.errors?.required">Contraseña es requerida</div>
                  <div *ngIf="f.contraseña.errors?.minlength">La contraseña debe tener al menos 6 caracteres</div>
               -->
-            </div>          
+            </div>
            <div class="btn-container">
             <button class="btn-register" type="submit">Registrate</button>
-           </div>            
+           </div>
             <div class="span-container">
                 <span class="span-register">Al registrarte aceptas nuestras Condiciones y la Política de privacidad.</span>
             </div>
         </form>
-    </div>  
+    </div>
     <div class="section-login">
         <div class="login-container">
             <p>¿Tienes una cuenta?</p>
             <a href="">Entrar</a>
         </div>
-    </div> 
+    </div>
 </section>
 <section class="section-download-contact">
     <div class="section-download-app">
@@ -51,7 +60,7 @@
                 </figure>
             </div>
         </div>
-    </div>    
+    </div>
 </section>
 <div class="section-contacto">
     <div class="section-contacto-content">
