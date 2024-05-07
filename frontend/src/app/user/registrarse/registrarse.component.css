@@ -155,6 +155,11 @@
     align-items: center;
     padding: 20px;
 }
+.section-contacto-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .icon-container-contacto{
     width: 60px;
 }
@@ -223,5 +228,9 @@
    }
    .container-icon{
     display: flex;
+   }
+   
+   .section-contacto{
+    align-items: flex-end;
    }
 }
