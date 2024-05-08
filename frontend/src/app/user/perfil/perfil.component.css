@@ -52,6 +52,9 @@
    transform: translateY(-10px);
 }
 
+.container-email-password{
+    padding: 40px 0;
+}
 .input-container{
     display: flex;
     flex-direction: column;
@@ -92,7 +95,7 @@
     color: #3C5B27;
 }
 .input-container.email {
-    max-width: 250px;   
+    width: 250px;   
   }
 .group-input-icon{
     display: flex;
@@ -110,32 +113,83 @@
     margin-top: 50px;  
 }
 
+.container-confirm-cancel{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 50px;
+}
+.container-confirm-cancel figure{
+    padding: 0 20px;
+    transition: transform 0.3s ease;
+}
+.container-confirm-cancel figure:hover{
+    cursor: pointer;
+    transform: translateY(-10px);
+}
+
 
 @media (min-width: 768px) {
+    .title-perfil{
+        font-size: 3rem;
+    }
+
+    .userName, .nameUser{
+        font-size: 1.5rem;
+    }
+
+    .user-img-container{
+        width: 200px;
+        height: 200px;
+    }
+
     .info-container{
         display: flex;
         justify-content: flex-start;
-        padding: 30px 0;
+        align-items: center;
+        padding: 30px 0 50px 0;
     }
     .user-img-container{
-        padding-right: 50px
+        padding-right: 50px;      
     }
     .editar-icons{
         padding-left: 50px;
     }
 
+    .input-container{
+        width: 350px;
+    }
+    .input-container.email{
+        width: 350px;
+    }
     .input-container label {
       width: auto;
       margin-right: 20px;
+      font-size: 1.2rem;
     }
   
+    .icon-pen-eye{
+        display: flex;
+    }
     .icon-eye {
       justify-content: flex-end;
       margin-right: 15px;
     }
+
+    .icon-confirm, .icon-cancel{
+        width: 100px;
+        height: 100px;
+    }
+    .icon-confirm img, .icon-cancel img{
+        width: 100%;
+        height: auto;
+    }
   }
   
   @media (min-width: 1024px) {
+    .section-perfil{
+        padding: 150px;
+    }
     .input-container label {
       width: 150px;
       margin-right: 30px;
