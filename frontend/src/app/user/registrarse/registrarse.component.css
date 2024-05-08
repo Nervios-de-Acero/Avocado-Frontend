@@ -63,11 +63,15 @@
       border: 2px solid #B8E092;
     }
 
-      &.is-invalid{
-        border: 2px solid red;
-      }
-
+    &.is-invalid{
+      border: 2px solid red;
+    }
 }
+
+.register-container-input span {
+  color: red;
+}
+
 .register-container-input input::placeholder{
     color: #6D6868;
 }
