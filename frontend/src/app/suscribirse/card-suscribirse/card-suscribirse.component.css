@@ -1,0 +1,70 @@
+.card-subscribe{
+    display: flex;
+    flex-direction: column;
+    max-width: 200px;
+    height: auto;
+    margin: 30px;
+    border: 1px solid #B8E092;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.card-body header, .card-footer-price{
+    padding: 20px 5px;
+    text-align: center;
+    color: #FDFFEB;
+    background: #B8E092;
+    font-weight: 700;
+}
+
+.card-body header{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.card-footer-price{
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.card-product-info{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+.receta-info, .personas-info{
+    font-size: 0.95rem;
+    padding: 15px 0;
+}
+
+@media screen and (min-width: 768px) {
+    .card-subscribe {
+        max-width: 280px; /* Cambiar el ancho máximo para tablets */
+    }
+
+    .receta-info, .personas-info{
+        font-size: 1.3rem;
+        padding: 20px 5px;
+    }
+
+    .card-body header, .card-footer-price{
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .card-subscribe {
+        max-width: 480px; /* Cambiar el ancho máximo para tablets */
+    }
+
+    .receta-info, .personas-info{
+        font-size: 2.5rem;
+        padding: 30px 10px;
+    }
+
+    .card-body header, .card-footer-price{
+        font-size: 2.5rem;
+        padding: 35px 0;
+    }
+}
