@@ -1,9 +1,17 @@
+.card-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 205px;
+    margin: 30px;
+}
+
 .card-subscribe{
     display: flex;
     flex-direction: column;
-    max-width: 200px;
+    width: 200px;
     height: auto;
-    margin: 30px;
     border: 1px solid #B8E092;
     border-radius: 20px;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
@@ -38,9 +46,21 @@
     padding: 15px 0;
 }
 
+.button-container{
+    padding: 15px 0;
+}
+.button-container input{
+    width: 130px; 
+    height: 18px;  
+}
+
 @media screen and (min-width: 768px) {
+    .card-container{
+        width: 285px;
+    }
+
     .card-subscribe {
-        max-width: 280px; /* Cambiar el ancho máximo para tablets */
+        width: 280px; /* Cambiar el ancho máximo para tablets */
     }
 
     .receta-info, .personas-info{
@@ -51,11 +71,24 @@
     .card-body header, .card-footer-price{
         font-size: 1.5rem;
     }
+
+    .button-container{
+        padding: 30px 0;
+    }
+
+    .button-container input{
+        width: 150px; 
+        height: 25px;  
+    }
 }
 
 @media screen and (min-width: 1440px) {
+    .card-container{
+        width: 495px;
+    }
+
     .card-subscribe {
-        max-width: 480px; /* Cambiar el ancho máximo para tablets */
+        width: 480px; /* Cambiar el ancho máximo para tablets */
     }
 
     .receta-info, .personas-info{
@@ -66,5 +99,14 @@
     .card-body header, .card-footer-price{
         font-size: 2.5rem;
         padding: 35px 0;
+    }
+
+    .button-container{
+        padding: 40px 0;
+    }
+
+    .button-container input{
+        width: 200px; 
+        height: 40px;  
     }
 }
