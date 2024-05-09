@@ -8,12 +8,13 @@ import { User, UserDTO } from '../model/user.model';
 export class UserService {
 
   private http = inject(HttpClient);
-  private apiUrl = "";
+  private apiUrl = "http://localhost:3008";
 
   constructor() {}
 
   crearUser(data: UserDTO){
-    return this.http.post<UserDTO>(this.apiUrl, data);
+    console.log(data);
+    return this.http.post<UserDTO>(`${this.apiUrl}/registro`, data);
   }
 
   actualizarUser(id: number, data: UserDTO){

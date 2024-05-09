@@ -15,22 +15,19 @@ import { MyValidators } from '../../utils/validators';
 
 export class RegistrarseComponent {
 
-  registroForm: FormGroup;
-
-
-  constructor(private formBuilder: FormBuilder, private userService: UserService){
-    this.registroForm = this.formBuilder.group({
-      nombreCompleto: ['',[Validators.required, Validators.maxLength(50), Validators.minLength(6), Validators.pattern(/^[a-zA-Z\sñÑáéíóúÁÉÍÓÚ]+$/)]],
-      usuario: ['',[Validators.required, Validators.maxLength(20), Validators.minLength(4), Validators.pattern(/^[a-zA-Z0-9!@#$%^&*()_+{}|:<>?]+$/)]],
-      email: ['',[Validators.required, Validators.email]],
-      contrasenia: ['', [Validators.required, Validators.minLength(8), Validators.pattern(/^(?=.*[A-Z])(?=.*[0-9])[\w\W]{8,}$/)]],
-      confirmContrasenia: ['', [Validators.required]]
-    },{
-      validators: MyValidators.validContrasenia
-    }
-  );
+  registroForm = this.formBuilder.nonNullable.group({
+    nombreCompleto: ['',[Validators.required, Validators.maxLength(150), Validators.minLength(3), Validators.pattern(/^[a-zA-Z\sñÑáéíóúÁÉÍÓÚ]+$/)]],
+    usuario: ['',[Validators.required, Validators.maxLength(15), Validators.minLength(5), Validators.pattern(/^[a-zA-Z0-9!@#$%^&*()_+{}|:<>?]+$/)]],
+    email: ['',[Validators.required, Validators.email]],
+    contrasenia: ['', [Validators.required, Validators.minLength(8), Validators.maxLength(24), Validators.pattern(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W\_])[A-Za-z\d\W\_]+$/)]],
+    confirmContrasenia: ['', [Validators.required]]
+  },{
+    validators: MyValidators.validContrasenia
   }
+);
 
+
+  constructor(private formBuilder: FormBuilder, private userService: UserService){}
 
   get nombreCompleto(){
     return this.registroForm.get("nombreCompleto");
@@ -55,16 +52,27 @@ export class RegistrarseComponent {
   // get f() { return this.registroForm.controls; }
   // Boton que crea el user
   onSubmit() {
-    if(this.registroForm.valid){
-      console.log(this.registroForm.value)
-      // this.userService.crearUser(this.registroForm.value)
-      // .subscribe({
-      //   next:(response) => {
-      //     console.log(response)
-      //   }
-      // })
-    } else {
+    if(this.registroForm.invalid){
       this.registroForm.markAllAsTouched();
+    } else {
+      const formCompleto = this.registroForm.value
+      delete formCompleto.confirmContrasenia
+      const nuevoUser: UserDTO = {
+        nombreCompleto: formCompleto.nombreCompleto as string,
+        email: formCompleto.email as string,
+        usuario: formCompleto.usuario as string,
+        password: formCompleto.contrasenia as string
+      }
+
+      this.userService.crearUser(nuevoUser)
+      .subscribe({
+        next: (res) => {
+          console.log("El usuario fue creado correctamente", res)
+        },
+        error: (err) => {
+          console.log(err)
+        }
+      })
     }
   }
 

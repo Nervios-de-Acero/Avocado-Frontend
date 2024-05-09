@@ -15,10 +15,10 @@
                   el nombre es requerido
                 </span>
                 <span *ngIf="nombreCompleto?.touched && nombreCompleto?.hasError('minlength')">
-                  el nombre debe tener al menos 6 letras
+                  el nombre debe tener al menos 3 letras
                 </span>
-                <span *ngIf="nombreCompleto?.touched && nombreCompleto?.hasError('manlength')">
-                  el nombre debe tener como maximo 50 letras
+                <span *ngIf="nombreCompleto?.touched && nombreCompleto?.hasError('maxlength')">
+                  el nombre debe tener como maximo 150 letras
                 </span>
                 <span *ngIf="nombreCompleto?.touched && nombreCompleto?.hasError('pattern')">
                   el nombre debe contener solo letras
@@ -30,7 +30,7 @@
                 <span *ngIf="email?.touched &&  email?.hasError('required')">
                   el email es requerido
                 </span>
-                <span *ngIf="email?.touched && email?.hasError('minlength')">
+                <span *ngIf="email?.touched && email?.hasError('email')">
                   el email debe tener un formato correcto
                 </span>
             </div>
@@ -41,10 +41,10 @@
                 el usuario es requerido
               </span>
               <span *ngIf="usuario?.touched && usuario?.hasError('minlength')">
-                el usuario debe tener al menos 4 caracteres
+                el usuario debe tener al menos 5 caracteres
               </span>
-              <span *ngIf="usuario?.touched && usuario?.hasError('manlength')">
-                el usuario debe tener como maximo 20 caracteres
+              <span *ngIf="usuario?.touched && usuario?.hasError('maxlength')">
+                el usuario debe tener como maximo 15 caracteres
               </span>
               <span *ngIf="usuario?.touched && usuario?.hasError('pattern')">
                 el usuario no puede contener espacios y ciertos caracteres especiales
@@ -59,8 +59,11 @@
               <span *ngIf="contrasenia?.touched && contrasenia?.hasError('minlength')">
                 la contraseña debe tener al menos 8 caracteres
               </span>
+              <span *ngIf="contrasenia?.touched && contrasenia?.hasError('maxlength')">
+              la contraseña debe tener como maximo 24 caracteres
+              </span>
               <span *ngIf="contrasenia?.touched && contrasenia?.hasError('pattern')">
-                la contraseña debe contener al menos una mayuscula y un numero
+                la contraseña debe contener al menos una mayuscula, una minuscula, un numero y un caracter especial
               </span>
             </div>
             <div class="register-container-input">
