@@ -1,0 +1,68 @@
+<section class="register-section">
+    <div class="register-container">
+        <h1 class="register-title">Bienvenido</h1>
+        <figure class="logo-container-app">
+            <img class="logo-img" src="../../../assets/logo/logo-palta.png" alt="logo de la app">
+        </figure>
+        <div>
+            <p class="register-leyend">¡Regístrate ahora para unirte a esta creciente comunidad culinaria y disfrutar de miles de recetas!</p>
+        </div>
+        <form>
+            <div class="register-container-input">
+                <input type="text" formControlName="nombreCompleto" placeholder="Nombre Completo">
+                <!-- <div *ngIf="f.nombreCompleto.errors?.required">Nombre Completo es requerido</div> -->          
+            </div>
+            <div class="register-container-input">
+                <input type="email" formControlName="email" placeholder="Email">
+                <!--  <div *ngIf="f.email.errors?.required">Email es requerido</div>
+                 <div *ngIf="f.email.errors?.email">Email inválido</div> -->
+            </div>
+            <div class="register-container-input">
+                <input type="password" formControlName="contraseña" placeholder="Contraseña">
+                <!--  <div *ngIf="f.contraseña.errors?.required">Contraseña es requerida</div>
+                 <div *ngIf="f.contraseña.errors?.minlength">La contraseña debe tener al menos 6 caracteres</div>
+              -->
+            </div>          
+           <div class="btn-container">
+            <button class="btn-register" type="submit">Registrate</button>
+           </div>            
+            <div class="span-container">
+                <span class="span-register">Al registrarte aceptas nuestras Condiciones y la Política de privacidad.</span>
+            </div>
+        </form>
+    </div>  
+    <div class="section-login">
+        <div class="login-container">
+            <p>¿Tienes una cuenta?</p>
+            <a href="">Entrar</a>
+        </div>
+    </div> 
+</section>
+<section class="section-download-contact">
+    <div class="section-download-app">
+        <div class="container-span-download">
+            <span>Descarga la aplicación</span>
+            <div class="download-icon-container">
+                <figure>
+                    <img class="download-icon" src="../../../assets/iconos/app-store-android.png" alt="logo descarga android">
+                </figure>
+                <figure>
+                    <img class="download-icon" src="../../../assets/iconos/app-store.png" alt="logo descarga ios">
+                </figure>
+            </div>
+        </div>
+    </div>    
+</section>
+<div class="section-contacto">
+    <div class="section-contacto-content">
+        <div class="container-icon">
+            <figure class="icon-container-contacto">
+                <img class="icon-contacto" src="../../../assets/iconos/atencion-al-cliente.png" alt="icono de atencion al cliente">
+            </figure>
+        </div>
+        <div class="contacto-container">
+            <span class="span-contacto">Tenes problemas con la aplicación?</span>
+            <a class="contacto-link" href="">Contáctanos</a>
+        </div>
+    </div>
+</div>
