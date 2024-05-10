@@ -19,7 +19,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 90px 10px;
+    padding: 90px 10px 30px;
 }
 
 .title-container h1{
@@ -53,3 +53,29 @@
     background-color: #FDFFEB;
     border: 1px solid #B8E092;
 }
+
+.card-slider-container {
+    overflow-x: auto; /* Habilita el desplazamiento horizontal solo en este contenedor */
+    -webkit-overflow-scrolling: touch; /* Desplazamiento suave en dispositivos iOS */
+    margin-bottom: 20px; /* Espacio opcional para separar del contenido siguiente */
+    width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+  }
+  
+  .card-slider-wrapper {
+    display: flex; /* Mantiene las tarjetas en una fila */
+  }
+  
+  .card-slider {
+    display: flex;
+    flex-wrap: nowrap; /* Evita que las tarjetas se envuelvan */
+    padding-bottom: 10px; /* Espacio adicional para desplazarse más fácilmente */
+  }
+  
+  .app-card-suscribirse {
+    flex: 0 0 auto;
+    margin-right: 10px; /* Espacio entre las tarjetas */
+  }
+  
+  .app-card-suscribirse:last-child {
+    margin-right: 0; /* Elimina el margen derecho de la última tarjeta */
+  }
