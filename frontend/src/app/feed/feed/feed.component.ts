@@ -28,10 +28,7 @@ export class FeedComponent {
     this.recetaService.getRecetas(this.receta_id)
       .subscribe({
         next: (data) => {
-          console.log(data.content)
           this.recetasSignal.set(data.content);
-          console.log("Que traer recetas signal:")
-          console.log(this.recetasSignal)
         },
         error: (err) => {
           console.log("El error es:", err)
