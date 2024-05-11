@@ -6,14 +6,14 @@ import { SuscribirseComponent } from './suscribirse/suscribirse/suscribirse.comp
 export const routes: Routes = [
     {
         path: 'login',
-        component: LoginComponent    
+        component: LoginComponent
     },
     {
         path: 'registrarse',
-        component: RegistrarseComponent      
+        component: RegistrarseComponent
     },
     {
         path: 'suscripcion',
-        component: SuscribirseComponent      
+        component: SuscribirseComponent
     }
 ];

@@ -8,12 +8,11 @@
             <div class="card-slider-container">
               <div class="card-slider-wrapper">
                 <div class="card-slider">
-                  <!-- Aquí van tus tarjetas -->
-                  <app-card-suscribirse></app-card-suscribirse>
-                  <app-card-suscribirse></app-card-suscribirse>
-                  <app-card-suscribirse></app-card-suscribirse>
-                  <app-card-suscribirse></app-card-suscribirse>
-                  <app-card-suscribirse></app-card-suscribirse>
+                  @for (suscripcion of suscripciones(); track suscripcion) {
+                    <app-card-suscribirse
+                      [suscripcion]="suscripcion"
+                      />
+                  }
                 </div>
               </div>
             </div>
