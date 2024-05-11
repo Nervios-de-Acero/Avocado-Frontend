@@ -1,11 +1,11 @@
 <article class="card-container">
     <div card="card-body">
         <figure class="card-img-container">
-            <img src="../../../assets/perfiles/hernan_perfil.jpg" alt="">
+            <img [src]="receta.imagen || 'https://theme-assets.getbento.com/sensei/a7c4085.sensei/assets/images/catering-item-placeholder-704x520.png'" [alt]="receta.titulo" >
         </figure>
         <div class="card-content">
-            <h3 class="title-card">Titulo de la Receta</h3>
-            <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis aliquid nemo eos corporis? Corporis ut natus quod vel numquam cum facilis. Nostrum officiis cupiditate non recusandae distinctio optio. Debitis, dolores.</p>
-        </div>        
+            <h3 class="title-card">{{receta.titulo}}</h3>
+            <p class="card-text">{{receta.descripcion}}</p>
+        </div>
     </div>
 </article>

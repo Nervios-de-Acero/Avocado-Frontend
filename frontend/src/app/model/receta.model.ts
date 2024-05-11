@@ -3,6 +3,6 @@ export interface Receta{
   titulo: string,
   descripcion: string,
   imagen: string,
-  fechaCreacion:string,
-  fechaActualizacion: string
+  fechaCreacion?:string,
+  fechaActualizacion?: string
 }

@@ -13,16 +13,17 @@ export class RecetaService {
 
   constructor() { }
 
-  getRecetas(category_id?: string) {
+  getRecetas(id?: number) {
     const url = new URL(this.apiUrl);
+    const receta_id = id?.toString()
     // Si existe el category_id
-    if(category_id){
+    if(receta_id){
       // El categoryId es como aparece en nuestro endpoint, tiene que ser igual
-      url.searchParams.set("categoryId", category_id);
+      url.searchParams.set("categoryId", receta_id);
     }
 
     // En este caso una lista de objetos recetas
     // Pasarle el parametro de la url con toString para que sea texto
-    return this.http.get<Receta[]>(url.toString());
+    return this.http.get<any>(url.toString());
   }
 }

@@ -1,19 +1,19 @@
 import { Routes } from '@angular/router';
 import { RegistrarseComponent } from './user/registrarse/registrarse.component';
 import { LoginComponent } from './login/login.component';
-import { CardRecetaComponent } from './receta/card-receta/card-receta.component';
+import { FeedComponent } from './feed/feed/feed.component';
 
 export const routes: Routes = [
     {
         path: 'login',
-        component: LoginComponent    
+        component: LoginComponent
     },
     {
         path: 'registrarse',
-        component: RegistrarseComponent      
+        component: RegistrarseComponent
     },
     {
-        path: 'card',
-        component: CardRecetaComponent      
+        path: 'feed',
+        component: FeedComponent
     }
 ];
