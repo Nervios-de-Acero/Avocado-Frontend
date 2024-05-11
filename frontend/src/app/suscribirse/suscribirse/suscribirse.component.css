@@ -54,28 +54,65 @@
     border: 1px solid #B8E092;
 }
 
-.card-slider-container {
-    overflow-x: auto; /* Habilita el desplazamiento horizontal solo en este contenedor */
-    -webkit-overflow-scrolling: touch; /* Desplazamiento suave en dispositivos iOS */
-    margin-bottom: 20px; /* Espacio opcional para separar del contenido siguiente */
-    width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+/* SLIDER */
+/* Estilo base para el contenedor del slider */
+.container-card-suscripcion {
+  overflow-x: auto; /* Permitir desplazamiento horizontal */
+  display: flex; /* Utiliza flexbox para las tarjetas */
+}
+
+/* Estilo para las tarjetas */
+.card-slider {
+  display: flex;
+  margin-right: 10px; /* Espacio entre tarjetas */
+}
+
+/* Estilo para el contenedor del slider en versión móvil */
+@media (max-width: 768px) {
+  .container-card-suscripcion {
+    flex-wrap: nowrap; /* Asegura que las tarjetas no se envuelvan en móvil */
+    width: 100%; /* Ajusta el ancho del contenedor al 100% */
   }
-  
-  .card-slider-wrapper {
-    display: flex; /* Mantiene las tarjetas en una fila */
-  }
-  
+
   .card-slider {
-    display: flex;
-    flex-wrap: nowrap; /* Evita que las tarjetas se envuelvan */
-    padding-bottom: 10px; /* Espacio adicional para desplazarse más fácilmente */
+    width: 100%; /* Ancho completo en dispositivos móviles */
   }
-  
-  .app-card-suscribirse {
-    flex: 0 0 auto;
-    margin-right: 10px; /* Espacio entre las tarjetas */
+}
+
+/* Estilo para el contenedor del slider en versiones de tablet y escritorio */
+@media (min-width: 768px) {
+  .container-card-suscripcion {
+    scrollbar-width: none; /* Ocultar la barra de desplazamiento */
+    -ms-overflow-style: none; /* Ocultar la barra de desplazamiento en IE/Edge */
   }
-  
-  .app-card-suscribirse:last-child {
-    margin-right: 0; /* Elimina el margen derecho de la última tarjeta */
+
+  .container-card-suscripcion::-webkit-scrollbar {
+    display: none; /* Ocultar la barra de desplazamiento en navegadores WebKit */
   }
+
+  .card-slider {
+    flex: 0 0 auto; /* Desactiva el crecimiento y encogimiento de las tarjetas */
+    margin-right: 20px; /* Espacio entre tarjetas */
+  }
+
+  .title-container{
+    padding: 100px;
+  }
+
+  .title-container h1{
+    font-size: 2.3rem;
+  }
+
+  .title-container h3{
+    font-size: 1.8rem;
+  }
+
+  .container-info{
+    font-size: 2rem;
+  }
+}
+
+./* section-suscripcion{ 
+  background-size: cover;
+  background-position: top right;
+} */
