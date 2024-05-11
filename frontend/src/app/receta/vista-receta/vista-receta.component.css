@@ -1,0 +1,51 @@
+.detail-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.img-container{
+    width: 100%;
+}
+.img-detail{
+    width: 100%;
+    height: 250px;
+}
+.img-detail img{
+    width: 100%;
+    height: auto;
+}
+
+.info-container{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.info-container h1{
+    padding: 20px 0;
+}
+
+.icons-details-container{
+    padding: 20px 10px;
+}
+
+.details-info-container{
+    display: flex;
+    align-items: center;
+    padding-bottom: 15px;
+}
+
+.timer-info-icon, .cook-info-icon{
+    width: 40px;
+    height: 40px;
+    padding-right: 15px;
+}
+
+.timer-info-icon img, .cook-info-icon img{
+    width: 100%;
+    height: auto;
+}
+
+.ingredientes-container{
+    padding: 10px;
+}
