@@ -1,0 +1,145 @@
+.detail-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.img-container{
+    width: 100%;
+   
+}
+.img-detail{
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    position: relative;
+}
+.img-detail img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+.info-container{
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.info-container h1{
+    padding: 20px 0;
+    color: #3C5B27;
+    font-weight: 700;
+}
+
+.icons-details-container{
+    padding: 20px 10px;
+}
+
+.details-info-container{
+    display: flex;
+    align-items: center;
+    padding-bottom: 15px;
+}
+
+.timer-info-icon, .cook-info-icon{
+    width: 40px;
+    height: 40px;
+    padding-right: 15px;
+}
+
+.timer-info-icon img, .cook-info-icon img{
+    width: 100%;
+    height: auto;
+}
+
+.ingredientes-container, .pasos-container{
+    padding: 20px 15px;
+    margin-bottom: 30px;
+}
+
+.ingredientes-list, .pasos-list{
+    background-color: #FDFFEB;
+    width: 95%;
+}
+.ingredientes-list div, .pasos-list div{
+    padding: 30px 15px;
+}
+
+
+.ingredientes-container h3, .pasos-container h3{
+    font-size: 1rem;
+    color: #3C5B27;
+    font-weight: 600;
+}
+
+@media (min-width: 500px) {
+    .img-detail{
+        height: 400px;
+    }
+}
+
+@media (min-width: 768px) {
+    .info-container h1{
+        font-size: 2.3rem;
+    }
+
+    .description-info{
+        font-size: 1.6rem;
+        padding: 35px 5px;
+    }
+
+    .details-info-container span {
+        font-size: 1.5rem;
+    }
+
+    .timer-info-icon, .cook-info-icon{
+        width: 60px;
+        height: 60px;
+    }
+
+    .ingredientes-container h3, .pasos-container h3{
+        font-size: 2rem;
+    }
+}
+
+@media (min-width: 1020px) {
+    .vista-detail-container{
+        padding: 40px 10px;
+    }
+
+    .detail-container{
+        display: flex;
+        flex-direction: row;
+        padding: 40px 30px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .img-detail{
+        width: 350px;
+        height: 300px;
+    }
+
+    .info-container h1{
+        font-size: 2rem;
+        padding: 15px 0;
+    }
+
+    .description-info{
+        padding: 20px 5px;
+    }
+}
+
+@media (min-width: 1350px) {
+    .vista-detail-container{
+        padding: 70px 60px;
+    }
+
+    .img-detail{
+        width: 450px;
+        height: 400px;
+    }
+}
