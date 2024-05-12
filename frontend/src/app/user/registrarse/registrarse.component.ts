@@ -2,8 +2,9 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { UserService } from '../../services/user.service';
-import { User, UserDTO } from '../../model/user.model';
+import {UserDTO } from '../../model/user.model';
 import { MyValidators } from '../../utils/validators';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-registrarse',
@@ -14,6 +15,8 @@ import { MyValidators } from '../../utils/validators';
 })
 
 export class RegistrarseComponent {
+
+
 
   registroForm = this.formBuilder.nonNullable.group({
     nombreCompleto: ['',[Validators.required, Validators.maxLength(150), Validators.minLength(3), Validators.pattern(/^[a-zA-Z\sñÑáéíóúÁÉÍÓÚ]+$/)]],
@@ -27,7 +30,7 @@ export class RegistrarseComponent {
 );
 
 
-  constructor(private formBuilder: FormBuilder, private userService: UserService){}
+  constructor(private formBuilder: FormBuilder, private userService: UserService, private router: Router){}
 
   get nombreCompleto(){
     return this.registroForm.get("nombreCompleto");
@@ -67,10 +70,16 @@ export class RegistrarseComponent {
       this.userService.crearUser(nuevoUser)
       .subscribe({
         next: (res) => {
-          console.log("El usuario fue creado correctamente", res)
+          alert("El usuario fue creado correctamente" + res)
+          this.router.navigate(["/login"])
         },
         error: (err) => {
-          console.log(err)
+          if (err.status === 409) {
+            alert('El correo electrónico ya está en uso. Por favor, utilice otro.');
+          } else {
+            console.error("Error during registration:", err);
+            // Handle other errors appropriately
+          }
         }
       })
     }
