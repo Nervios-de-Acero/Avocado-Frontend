@@ -62,7 +62,7 @@
 
 .ingredientes-list, .pasos-list{
     background-color: #FDFFEB;
-    width: 1025px;
+    width: 95%;
 }
 .ingredientes-list div, .pasos-list div{
     padding: 30px 15px;
