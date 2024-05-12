@@ -3,6 +3,7 @@ import { RegistrarseComponent } from './user/registrarse/registrarse.component';
 import { LoginComponent } from './login/login.component';
 import { FeedComponent } from './feed/feed/feed.component';
 import { VistaRecetaComponent } from './receta/vista-receta/vista-receta.component';
+import { FooterComponent } from './shared/footer/footer.component';
 
 export const routes: Routes = [
     {
@@ -18,7 +19,7 @@ export const routes: Routes = [
         component: FeedComponent
     },
     {
-        path: 'vista',
-        component: VistaRecetaComponent
+        path: 'footer',
+        component: FooterComponent
     }
 ];
