@@ -18,7 +18,7 @@ export const routes: Routes = [
         component: FeedComponent
     },
     {
-        path: 'vista',
+        path: 'feed/:id',
         component: VistaRecetaComponent
     }
 ];
