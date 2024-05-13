@@ -1,0 +1,6 @@
+<section class="feed-container">
+  @for (receta of recetasSignal(); track receta) {
+    <app-card-receta
+      [receta]="receta"/>
+  }
+</section>

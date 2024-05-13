@@ -2,7 +2,8 @@ import { Routes } from '@angular/router';
 import { RegistrarseComponent } from './user/registrarse/registrarse.component';
 import { LoginComponent } from './user/login/login.component';
 import { LayoutComponent } from './user/layout/layout.component';
-import { FeedComponent } from './user/feed/feed.component';
+import { FeedComponent } from './feed/feed/feed.component';
+import { VistaRecetaComponent } from './receta/vista-receta/vista-receta.component';
 
 export const routes: Routes = [
     {
@@ -11,8 +12,8 @@ export const routes: Routes = [
         pathMatch:'full'
     },
     {
-        path: 'login',
-        component: LoginComponent,  
+        path:'login',
+        component:LoginComponent
     },
     {
         path: 'registrarse',
@@ -26,7 +27,12 @@ export const routes: Routes = [
                 path:'feed',
                 component:FeedComponent,
 
+            },
+            {
+                path: 'feed/:id',
+                component: VistaRecetaComponent
             }
         ]
     }
+
 ];
