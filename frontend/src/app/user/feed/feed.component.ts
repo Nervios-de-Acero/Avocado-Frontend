@@ -21,7 +21,7 @@ export class FeedComponent implements OnInit{
   }
 
   getAllusers(){
-    this.http.get('https://jsonplaceholder.typicode.com/users').subscribe((res:any)=>{
+    this.http.get('http://localhost:3008/users').subscribe((res:any)=>{
         this.users = res.data;
       }, error => {
         alert("error from API")
