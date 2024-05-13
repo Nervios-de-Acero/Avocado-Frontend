@@ -4,6 +4,7 @@ import { LoginComponent } from './login/login.component';
 import { FeedComponent } from './feed/feed/feed.component';
 import { VistaRecetaComponent } from './receta/vista-receta/vista-receta.component';
 import { FooterComponent } from './shared/footer/footer.component';
+import { NavbarComponent } from './shared/navbar/navbar.component';
 
 export const routes: Routes = [
     {
@@ -19,7 +20,7 @@ export const routes: Routes = [
         component: FeedComponent
     },
     {
-        path: 'footer',
-        component: FooterComponent
+        path: 'navbar',
+        component: NavbarComponent
     }
 ];
