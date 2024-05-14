@@ -1,7 +1,9 @@
 <article class="card-container">
     <div card="card-body">
         <figure class="card-img-container">
+          <a [routerLink]="['/feed', receta.idReceta]">
             <img [src]="receta.imagen || 'https://theme-assets.getbento.com/sensei/a7c4085.sensei/assets/images/catering-item-placeholder-704x520.png'" [alt]="receta.titulo" >
+          </a>
         </figure>
         <div class="card-content">
             <h3 class="title-card">{{receta.titulo}}</h3>

@@ -7,7 +7,7 @@
 
 
 
-.register-section{
+.login-section{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -16,7 +16,7 @@
     margin-top: 40px;
 }
 
-.register-container{
+.login-container{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -25,7 +25,7 @@
     padding: 15px;
 }
 
-.register-title{
+.login-title{
     font-family: "Sacramento", cursive;
     font-weight: 400;
     text-align: center;
@@ -40,20 +40,20 @@
     height: auto;
 }
 
-.register-leyend{
+.login-leyend{
     padding: 10px 0;
     text-align: center;
     font-size: 1rem;
 }
 
-.register-container-input{
+.login-container-input{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 10px;
 }
-.register-container-input input{
+.login-container-input input{
     padding: 15px;
     background-color: #D9D9D9;
     border: none;
@@ -68,11 +68,11 @@
     }
 }
 
-.register-container-input span {
+.login-container-input span {
   color: red;
 }
 
-.register-container-input input::placeholder{
+.login-container-input input::placeholder{
     color: #6D6868;
 }
 
@@ -82,7 +82,7 @@
     align-items: center;
     padding: 20px 0;
 }
-.btn-register{
+.btn-login{
     width: 137px;
     height: 45px;
     padding: 10px;
@@ -100,7 +100,7 @@
     align-items: center;
     padding: 20px 0;
 }
-.span-register{
+.span-login{
     text-align: center;
     font-size: 0.8rem;
 }
@@ -225,7 +225,7 @@
 }
 
 @media (min-width: 768px) {
-    .register-container{
+    .login-container{
         width: 450px;
     }
     .login-container{
