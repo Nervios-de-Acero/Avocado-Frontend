@@ -128,6 +128,25 @@
     transform: translateY(-10px);
 }
 
+.btn-delete-conainer{
+    padding: 40px 0;
+}
+.btn_delete{
+    width: 137px;
+    height: 45px;
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 20px;
+    color:  #FDFFEB;
+    background-color: #B8E092;
+    border: none;
+    cursor: pointer;
+}
+.btn_delete:hover{
+    background-color: red;
+}
+
 
 @media (min-width: 768px) {
     .title-perfil{
@@ -236,8 +255,6 @@
         height: 50px;
     }
 
-   
-
     .container-email-password {
         padding: 40px 80px;
     }
@@ -253,4 +270,9 @@
         font-size: 1.3rem;
     }
 
+    .btn_delete{
+        width: 200px;
+        height: 60px;
+        font-size: 1.3rem;
+    }
 }

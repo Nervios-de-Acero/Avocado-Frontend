@@ -92,6 +92,7 @@
     color:  #FDFFEB;
     background-color: #B8E092;
     border: none;
+    cursor: pointer;
 }
 
 .span-container{
