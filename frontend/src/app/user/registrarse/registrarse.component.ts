@@ -69,8 +69,8 @@ export class RegistrarseComponent {
 
       this.userService.crearUser(nuevoUser)
       .subscribe({
-        next: (res) => {
-          alert("El usuario fue creado correctamente" + res)
+        next: () => {
+          alert("El usuario fue creado correctamente")
           this.router.navigate(["/login"])
         },
         error: (err) => {
