@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router, RouterOutlet } from '@angular/router';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-layout',
@@ -10,9 +11,13 @@ import { Router, RouterOutlet } from '@angular/router';
 })
 export class LayoutComponent {
 
-  constructor(private router: Router) {
+  constructor(private authService: AuthService, private router: Router) {
 
   }
-
+  logout() {
+    this.authService.logout();
+    this.router.navigateByUrl('/login');
+    alert("Sesion cerrada")
+  }
 
 }

@@ -3,7 +3,8 @@ import { CommonModule } from '@angular/common';
 import { CardRecetaComponent } from '../../receta/card-receta/card-receta.component';
 import { Receta } from '../../model/receta.model';
 import { RecetaService } from '../../services/receta.service';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-feed',
@@ -14,6 +15,7 @@ import { RouterModule } from '@angular/router';
 })
 export class FeedComponent {
 
+  constructor(private authService: AuthService, private router: Router) { }
   recetasSignal = signal<Receta[]>([]);
 
   private recetaService = inject(RecetaService);
@@ -21,6 +23,10 @@ export class FeedComponent {
   @Input() receta_id?: number;
 
   ngOnInit(){
+    if (!this.authService.isLoggedIn()) {
+      // Si no está autenticado, redirigir a la página de inicio de sesión
+      this.router.navigateByUrl('/login');
+    }
     this.getRecetas()
   }
 
