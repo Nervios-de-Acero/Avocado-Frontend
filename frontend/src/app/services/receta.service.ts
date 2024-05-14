@@ -9,12 +9,12 @@ export class RecetaService {
 
   private http = inject(HttpClient);
 
-  private apiUrl = "http://localhost:3008/receta/getRecetasFeed";
+  private apiUrl = "http://localhost:3008";
 
   constructor() { }
 
   getRecetas(id?: number) {
-    const url = new URL(this.apiUrl);
+    const url = new URL(this.apiUrl + "/receta/getRecetasFeed");
     const category_id = id?.toString()
     // Si existe el category_id
     if(category_id){
@@ -28,7 +28,7 @@ export class RecetaService {
 
   getOne(id: number) {
     return this.http.get<any>(
-      `http://localhost:3008/receta/getRecetaById?id=${id}`
+      `${this.apiUrl}/receta/getRecetaById?id=${id}`
     );
   }
 }
