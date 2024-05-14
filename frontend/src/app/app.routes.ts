@@ -4,10 +4,8 @@ import { LoginComponent } from './user/login/login.component';
 import { LayoutComponent } from './user/layout/layout.component';
 import { FeedComponent } from './feed/feed/feed.component';
 import { VistaRecetaComponent } from './receta/vista-receta/vista-receta.component';
-import { SuscribirseComponent } from './suscribirse/suscribirse/suscribirse.component';
-import { FooterComponent } from './shared/footer/footer.component';
-import { NavbarComponent } from './shared/navbar/navbar.component';
 import { PerfilComponent } from './user/perfil/perfil.component';
+import { SuscribirseComponent } from './suscribirse/suscribirse/suscribirse.component';
 
 export const routes: Routes = [
     {
@@ -21,6 +19,32 @@ export const routes: Routes = [
     },
     {
         path: 'registrarse',
-        component: RegistrarseComponent      
+        component: RegistrarseComponent
+    },
+    {
+        path:'',
+        component:LayoutComponent,
+        children:[
+            {
+                path:'feed',
+                component:FeedComponent,
+
+            },
+            {
+                path: 'feed/:id',
+                component: VistaRecetaComponent
+            },
+            {
+                path:'perfil',
+                component:PerfilComponent,
+
+            },
+            {
+                path:'suscribirse',
+                component:SuscribirseComponent,
+
+            },
+            
+        ]
     }
 ];
