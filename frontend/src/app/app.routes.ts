@@ -4,6 +4,7 @@ import { LoginComponent } from './user/login/login.component';
 import { LayoutComponent } from './user/layout/layout.component';
 import { FeedComponent } from './feed/feed/feed.component';
 import { VistaRecetaComponent } from './receta/vista-receta/vista-receta.component';
+import { SuscribirseComponent } from './suscribirse/suscribirse/suscribirse.component';
 
 export const routes: Routes = [
     {
@@ -31,6 +32,10 @@ export const routes: Routes = [
             {
                 path: 'feed/:id',
                 component: VistaRecetaComponent
+            },
+            {
+                path: 'suscribirse',
+                component: SuscribirseComponent
             }
         ]
     }

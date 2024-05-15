@@ -11,8 +11,10 @@
                   @for (suscripcion of suscripciones(); track suscripcion) {
                     <app-card-suscribirse
                       [suscripcion]="suscripcion"
+                      (precioSeleccionado)="seleccionarPrecio($event)"
                       />
                   }
+                
                 </div>
               </div>
             </div>
@@ -22,7 +24,12 @@
                 Después de finalizar tu pedido, puedes escoger entre muchas opciones deliciosas.</p>
         </div>
         <div>
-            <button class="btn-suscribir">Suscríbete ahora</button>
+            <button class="btn-suscribir">
+              <button class="btn-suscribir" (click)="inicializarPayPalButton()">
+                Suscríbete ahora
+              </button>
+              <div id="paypal-button-container"></div>
+            </button>
         </div>
     </div>
 </section>

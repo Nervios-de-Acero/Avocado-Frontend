@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Suscripcion } from '../../model/suscripcion.model';
 
 @Component({
@@ -11,5 +11,11 @@ import { Suscripcion } from '../../model/suscripcion.model';
 export class CardSuscribirseComponent {
 
   @Input({required: true}) suscripcion!: Suscripcion;
+  @Output() precioSeleccionado = new EventEmitter<any>();
+
+  seleccionarSuscripcion() {
+    this.precioSeleccionado.emit(this.suscripcion.precio);
+    console.log(this.precioSeleccionado)
+  }
 
 }
