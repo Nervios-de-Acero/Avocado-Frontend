@@ -4,6 +4,10 @@ import { LoginComponent } from './user/login/login.component';
 import { LayoutComponent } from './user/layout/layout.component';
 import { FeedComponent } from './feed/feed/feed.component';
 import { VistaRecetaComponent } from './receta/vista-receta/vista-receta.component';
+import { PerfilComponent } from './user/perfil/perfil.component';
+import { SuscribirseComponent } from './suscribirse/suscribirse/suscribirse.component';
+import { ContactoComponent } from './contacto/contacto/contacto.component';
+import { SobreNosotrosComponent } from './acerca-de/sobre-nosotros/sobre-nosotros.component';
 
 export const routes: Routes = [
     {
@@ -20,11 +24,35 @@ export const routes: Routes = [
         component: RegistrarseComponent
     },
     {
-        path: 'feed',
-        component: FeedComponent
-    },
-    {
-        path: 'vista',
-        component: VistaRecetaComponent
+        path:'',
+        component:LayoutComponent,
+        children:[
+            {
+                path:'feed',
+                component:FeedComponent,
+
+            },
+            {
+                path: 'feed/:id',
+                component: VistaRecetaComponent
+            },
+            {
+                path: 'perfil',
+                component: PerfilComponent
+            },
+            {
+                path: 'suscribirse',
+                component: SuscribirseComponent
+            },
+            {
+                path: 'contacto',
+                component: ContactoComponent
+            },
+            {
+                path: 'sobrenosotros',
+                component: SobreNosotrosComponent
+            }
+
+        ]
     }
 ];

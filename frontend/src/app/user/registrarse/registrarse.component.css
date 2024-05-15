@@ -93,6 +93,11 @@
     background-color: #B8E092;
     border: none;
     cursor: pointer;
+    transition: transform 0.3s;
+}
+.btn-register:hover{
+    background-color: #3C5B27;
+    transform: scale(1.1);
 }
 
 .span-container{

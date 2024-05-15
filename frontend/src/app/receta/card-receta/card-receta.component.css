@@ -3,7 +3,7 @@
     flex-direction: column;
     overflow: hidden;
     position: relative;
-    width: 280px;
+    width: 230px;
     height: auto;
     background-color: #FDFFEB;
     margin: 20px;
@@ -45,7 +45,7 @@
     display: flex;
     flex: 1 1 auto;
     flex-direction: column;
-    padding: 1rem;
+    padding: 1rem; 
 }
 
 .card-img-container{
@@ -72,7 +72,7 @@
 .card-text{
     flex: 1 1 auto;
     font-size: 0.98rem;
-    margin-bottom: 1.25rem;
+    margin-bottom: 1.25rem
 }
 
 
