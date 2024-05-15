@@ -3,7 +3,7 @@
     flex-direction: column;
     overflow: hidden;
     position: relative;
-    width: 230px;
+    width: 250px;
     height: auto;
     background-color: #FDFFEB;
     margin: 20px;
@@ -31,7 +31,6 @@
     }
 }
 
-
 .card-container:hover{
     cursor: pointer;
 }
@@ -39,13 +38,14 @@
 .card-body{
     display: flex;
     flex-direction: column;
+    gap: 16px;
 }
 
 .card-content{
     display: flex;
-    flex: 1 1 auto;
     flex-direction: column;
-    padding: 1rem; 
+    padding: 10px; 
+    gap: 15px;
 }
 
 .card-img-container{
@@ -66,13 +66,16 @@
     font-size: 1.25rem;
     font-weight: 500;
     letter-spacing: 2px;
-    padding: 10px 0;
+    color: #3C5B27;
+    text-transform: capitalize;
 }
 
 .card-text{
     flex: 1 1 auto;
     font-size: 0.98rem;
-    margin-bottom: 1.25rem
+    padding-bottom: 15px;
+    line-height: 22px;
+    flex-grow: 1;
 }
 
 
