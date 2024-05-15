@@ -1,5 +1,5 @@
 .section-suscripcion{
-    padding: 60px 0;   
+    padding: 60px 0;
     background-image: url("../../../assets/imagenes/background-suscripcion.png");
     background-repeat: no-repeat;
     background-size: contain;
@@ -112,7 +112,7 @@
   }
 }
 
-./* section-suscripcion{ 
+/* section-suscripcion{
   background-size: cover;
   background-position: top right;
 } */
