@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+
+.section-perfil{
+    padding: 40px;
+}
+
+.title-perfil{
+    font-family: "Sacramento", cursive;
+    text-align: center;
+    padding: 40px;
+    font-size: 2rem;
+}
+
+.container-img-user{
+    display: flex;
+    justify-content: center;
+}
+.user-img-container{
+    width: 120px;
+    height: 120px; 
+}
+.img-user{
+    width: 100%;
+    height: auto;
+    border-radius: 100%;
+}
+
+.container-data{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0 50px 0;
+}
+.userName-data{
+    display: flex;
+    flex-direction: column;
+}
+.nameUser, .userName{
+    padding: 10px 0;
+    font-weight: 700;
+}
+.editar-icons{
+    display: flex;
+    flex-direction: column;
+}
+.icon-pen{
+    width: 35px;
+    height: 35px;
+    transition: transform 0.3s ease;
+}
+.icon-pen:hover{
+   cursor: pointer;
+   transform: translateY(-10px);
+}
+
+.container-email-password{
+    padding: 40px 0;
+}
+.input-container{
+    display: flex;
+    flex-direction: column;
+    padding: 30px 0;
+}
+
+
+.icon-change-password{
+    opacity: 0.3;
+}
+
+.register-container-input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.input-container {
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 30px 0; 
+    box-sizing: border-box;
+}
+.input-container label {
+    width: 100%;
+    padding: 15px 0;
+    box-sizing: border-box;
+    margin-right: 10px;
+    font-weight: 700;
+  }
+.input-container input{
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #B8E092;
+    box-sizing: border-box;
+}
+.input-container input::placeholder{
+    color: #3C5B27;
+}
+.input-container.email {
+    width: 250px;   
+  }
+.group-input-icon{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.icon-change-password, .icon-pen {
+    width: 35px;
+    height: 35px;
+    transition: transform 0.3s ease;
+}
+
+.horizontal-line {
+    border-top: 2px solid #B8E092;
+    margin-top: 50px;  
+}
+
+.container-confirm-cancel{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 50px;
+}
+.container-confirm-cancel figure{
+    padding: 0 20px;
+    transition: transform 0.3s ease;
+}
+.container-confirm-cancel figure:hover{
+    cursor: pointer;
+    transform: translateY(-10px);
+}
+
+.btn-delete-conainer{
+    padding: 40px 0;
+}
+.btn_delete{
+    width: 137px;
+    height: 45px;
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 20px;
+    color:  #FDFFEB;
+    background-color: #B8E092;
+    border: none;
+    cursor: pointer;
+}
+.btn_delete:hover{
+    background-color: red;
+}
+
+
+@media (min-width: 768px) {
+    .title-perfil{
+        font-size: 3rem;
+    }
+
+    .userName, .nameUser{
+        font-size: 1.2rem;
+    }
+
+    .user-img-container{
+        width: 160px;
+        height: 160px;
+    }
+
+    .info-container{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 30px 0 50px 0;
+    }
+    .user-img-container{
+        padding-right: 50px;      
+    }
+    .editar-icons{
+        padding-left: 50px;
+    }
+
+    .input-container{
+        width: 350px;
+    }
+    .input-container.email{
+        width: 350px;
+    }
+    .input-container label {
+      width: auto;
+      margin-right: 20px;
+      font-size: 1.2rem;
+    }
+  
+    .icon-pen-eye{
+        display: flex;
+    }
+    .icon-eye {
+      justify-content: flex-end;
+      margin-right: 15px;
+    }
+
+    .icon-confirm, .icon-cancel{
+        width: 100px;
+        height: 100px;
+    }
+    .icon-confirm img, .icon-cancel img{
+        width: 100%;
+        height: auto;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .section-perfil{
+        padding: 95px 160px;
+    }
+    .user-img-container{
+        width: 200px;
+        height: 200px;
+    }
+
+    .userName, .nameUser{
+        font-size: 1.5rem;
+    }
+
+    .input-container label {
+      width: 150px;
+      margin-right: 30px;
+    }
+  
+    .icon-eye {
+      justify-content: flex-end;
+      margin-right: 15px;
+    }
+    .input-container label {
+        width: 250px;
+    }
+}
+
+@media (min-width: 2560px){
+    .title-perfil{
+        font-size: 3.5rem;
+    }
+
+    .info-container{
+        justify-content: center;
+    }
+
+    .user-img-container{
+        width: 230px;
+        height: 230px;
+    }
+
+    .userName, .nameUser{
+        font-size: 1.9rem;
+    }
+
+    .icon-change-password, .icon-pen {
+        width: 50px;
+        height: 50px;
+    }
+
+    .container-email-password {
+        padding: 40px 80px;
+    }
+    .input-container, .input-container.email {
+        width: 700px;
+    }
+    .input-container label{
+        font-size: 1.9rem;
+        width: 00px;
+    }
+    .input-container input {
+        height: 70px;
+        font-size: 1.3rem;
+    }
+
+    .btn_delete{
+        width: 200px;
+        height: 60px;
+        font-size: 1.3rem;
+    }
+}
