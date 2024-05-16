@@ -17,8 +17,23 @@
                         <a class="link-item" routerLink="/feed">Home</a>
                     </div>
                 </li>
-                <li style="--i:2">
+                <!-- <li style="--i:2">
                     <div class="link-container">
+                        <img class="icon-link" src="../../../assets/iconos/icon-busqueda.png" alt="icono de lupa">
+                        <select class="select-categoria" name="categoria" id="categoria">
+                          <option routerLink="/receta/getRecetasFeed">Todas</option>
+                          @for (categoria of categorias(); track categoria) {
+                            <option [value]="categoria.idCategoria">
+                              <a routerLink="/receta/getRecetasFeed" [queryParams]="{categoria: categoria.idCategoria}">{{ categoria.nombre}}</a>
+                            </option>
+                          }
+                        </select>
+
+                    </div>
+                </li> -->
+                <li style="--i:3">
+                    <div class="link-container">
+
                         <img class="icon-link" src="../../../assets/iconos/icon-user.png" alt="icono de usuario">
                         <a class="link-item" routerLink="/perfil">Perfil</a>
                     </div>
