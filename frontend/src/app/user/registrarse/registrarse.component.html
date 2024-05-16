@@ -7,36 +7,86 @@
         <div>
             <p class="register-leyend">¡Regístrate ahora para unirte a esta creciente comunidad culinaria y disfrutar de miles de recetas!</p>
         </div>
-        <form>
+        <form [formGroup]="registroForm" (ngSubmit)="onSubmit()">
             <div class="register-container-input">
-                <input type="text" formControlName="nombreCompleto" placeholder="Nombre Completo">
-                <!-- <div *ngIf="f.nombreCompleto.errors?.required">Nombre Completo es requerido</div> -->          
+                <input type="text" name="nombreCompleto" formControlName="nombreCompleto" placeholder="Nombre Completo"
+                [class.is-invalid]="nombreCompleto?.touched && nombreCompleto?.invalid" [class.is-valid]="nombreCompleto?.touched && nombreCompleto?.valid">
+                <span *ngIf="nombreCompleto?.touched && nombreCompleto?.hasError('required')">
+                  el nombre es requerido
+                </span>
+                <span *ngIf="nombreCompleto?.touched && nombreCompleto?.hasError('minlength')">
+                  el nombre debe tener al menos 3 letras
+                </span>
+                <span *ngIf="nombreCompleto?.touched && nombreCompleto?.hasError('maxlength')">
+                  el nombre debe tener como maximo 150 letras
+                </span>
+                <span *ngIf="nombreCompleto?.touched && nombreCompleto?.hasError('pattern')">
+                  el nombre debe contener solo letras
+                </span>
             </div>
             <div class="register-container-input">
-                <input type="email" formControlName="email" placeholder="Email">
-                <!--  <div *ngIf="f.email.errors?.required">Email es requerido</div>
-                 <div *ngIf="f.email.errors?.email">Email inválido</div> -->
+                <input type="email" formControlName="email" placeholder="Email"
+                [class.is-invalid]="email?.touched && email?.invalid" [class.is-valid]="email?.touched && email?.valid">
+                <span *ngIf="email?.touched &&  email?.hasError('required')">
+                  el email es requerido
+                </span>
+                <span *ngIf="email?.touched && email?.hasError('email')">
+                  el email debe tener un formato correcto
+                </span>
             </div>
             <div class="register-container-input">
-                <input type="password" formControlName="contraseña" placeholder="Contraseña">
-                <!--  <div *ngIf="f.contraseña.errors?.required">Contraseña es requerida</div>
-                 <div *ngIf="f.contraseña.errors?.minlength">La contraseña debe tener al menos 6 caracteres</div>
-              -->
-            </div>          
+              <input type="usuario" formControlName="usuario" placeholder="Usuario"
+              [class.is-invalid]="usuario?.touched && usuario?.invalid" [class.is-valid]="usuario?.touched && usuario?.valid">
+              <span *ngIf="usuario?.touched && usuario?.hasError('required')">
+                el usuario es requerido
+              </span>
+              <span *ngIf="usuario?.touched && usuario?.hasError('minlength')">
+                el usuario debe tener al menos 5 caracteres
+              </span>
+              <span *ngIf="usuario?.touched && usuario?.hasError('maxlength')">
+                el usuario debe tener como maximo 15 caracteres
+              </span>
+              <span *ngIf="usuario?.touched && usuario?.hasError('pattern')">
+                el usuario no puede contener espacios y ciertos caracteres especiales
+              </span>
+            </div>
+            <div class="register-container-input">
+              <input type="password" formControlName="contrasenia" placeholder="Contraseña"
+              [class.is-invalid]="contrasenia?.touched && contrasenia?.invalid" [class.is-valid]="contrasenia?.touched && contrasenia?.valid">
+              <span *ngIf="contrasenia?.touched && contrasenia?.hasError('required')">
+                la contraseña es requerida
+              </span>
+              <span *ngIf="contrasenia?.touched && contrasenia?.hasError('minlength')">
+                la contraseña debe tener al menos 8 caracteres
+              </span>
+              <span *ngIf="contrasenia?.touched && contrasenia?.hasError('maxlength')">
+              la contraseña debe tener como maximo 24 caracteres
+              </span>
+              <span *ngIf="contrasenia?.touched && contrasenia?.hasError('pattern')">
+                la contraseña debe contener al menos una mayuscula, una minuscula, un numero y un caracter especial
+              </span>
+            </div>
+            <div class="register-container-input">
+              <input type="password" formControlName="confirmContrasenia" placeholder="Confirmar contraseña"
+              [class.is-invalid]="confirmContrasenia?.touched && registroForm.errors" [class.is-valid]="confirmContrasenia?.touched && confirmContrasenia?.valid">
+              <span *ngIf="confirmContrasenia?.touched && registroForm.hasError('match_contrasenia')">
+                las contrasenias no coinciden
+              </span>
+            </div>
            <div class="btn-container">
             <button class="btn-register" type="submit">Registrate</button>
-           </div>            
+           </div>
             <div class="span-container">
                 <span class="span-register">Al registrarte aceptas nuestras Condiciones y la Política de privacidad.</span>
             </div>
         </form>
-    </div>  
+    </div>
     <div class="section-login">
         <div class="login-container">
             <p>¿Tienes una cuenta?</p>
-            <a href="">Entrar</a>
+            <a routerLink="/login">Entrar</a>
         </div>
-    </div> 
+    </div>
 </section>
 <section class="section-download-contact">
     <div class="section-download-app">
@@ -51,7 +101,7 @@
                 </figure>
             </div>
         </div>
-    </div>    
+    </div>
 </section>
 <div class="section-contacto">
     <div class="section-contacto-content">

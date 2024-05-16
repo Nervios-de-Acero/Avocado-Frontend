@@ -1,0 +1,61 @@
+<section class="login-section">
+    <figure class="img-login-container">
+        <img src="../../../assets/imagenes/img-login.png" alt="imagenes relacionadas con comida">
+    </figure>
+    <div>
+        <div class="login-container">
+            <h1 class="login-title">Bienvenido</h1>
+            <figure class="logo-container-app">
+                <img class="logo-img" src="../../../assets/logo/logo-palta.png" alt="logo de la app">
+            </figure>
+            <div>
+                <p class="login-leyend">¡Regístrate ahora para unirte a esta creciente comunidad culinaria y disfrutar de miles de recetas!</p>
+            </div>
+                <form action="#">
+                    <div class="login-container-input">
+                        <input type="email" [(ngModel)]="loginObj.email" name="Email" placeholder="Email" required>                   
+                    </div>
+                    <div class="login-container-input">
+                        <input type="password" [(ngModel)]="loginObj.password" name="Password" placeholder="Contraseña" required>
+                    </div>
+                    <div class="btn-container">
+                    <button type="button" class="btn-login" (click)="onLogin()">Login</button>
+                    </div>
+                </form>
+        </div>  
+            <div class="section-login">
+                <div class="login-container">
+                    <p>¿No tienes una cuenta?</p>
+                    <a routerLink="/registrarse">Registrarse</a>
+                </div>
+            </div> 
+    </div>    
+    </section>
+    <section class="section-download-contact">
+        <div class="section-download-app">
+            <div class="container-span-download">
+                <span>Descarga la aplicación</span>
+                <div class="download-icon-container">
+                    <figure>
+                        <img class="download-icon" src="../../../assets/iconos/app-store-android.png" alt="logo descarga android">
+                    </figure>
+                    <figure>
+                        <img class="download-icon" src="../../../assets/iconos/app-store.png" alt="logo descarga ios">
+                    </figure>
+                </div>
+            </div>
+        </div>    
+    </section>
+    <div class="section-contacto">
+        <div class="section-contacto-content">
+            <div class="container-icon">
+                <figure class="icon-container-contacto">
+                    <img class="icon-contacto" src="../../../assets/iconos/atencion-al-cliente.png" alt="icono de atencion al cliente">
+                </figure>
+            </div>
+            <div class="contacto-container">
+                <span class="span-contacto">Tenes problemas con la aplicación?</span>
+                <a class="contacto-link" href="">Contáctanos</a>
+            </div>
+        </div>
+</div>

@@ -1,0 +1,13 @@
+.feed-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Dos columnas en dispositivos grandes */
+    gap: 20px; /* Espacio entre las cards */
+    padding: 40px 20px;
+    justify-items: center;
+}
+  
+@media (max-width: 600px) {
+    .feed-container {
+      grid-template-columns: 1fr;
+    }
+}
