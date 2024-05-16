@@ -1,4 +1,4 @@
-import { Component, signal, inject, Input } from '@angular/core';
+import { Component, signal, inject, Input, input, SimpleChanges } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CardRecetaComponent } from '../../receta/card-receta/card-receta.component';
 import { Receta } from '../../model/receta.model';
@@ -19,8 +19,8 @@ export class FeedComponent {
   recetasSignal = signal<Receta[]>([]);
 
   private recetaService = inject(RecetaService);
-
-  @Input() receta_id?: number;
+  @Input() categoriaId!: number;
+  idCat!: number;
 
   ngOnInit(){
     if (!this.authService.isLoggedIn()) {
@@ -30,10 +30,19 @@ export class FeedComponent {
     this.getRecetas()
   }
 
+
+
+  ngOnChanges(changes: SimpleChanges) {
+    if (changes['categoriaId']?.currentValue !== undefined) {
+      this.idCat = changes['categoriaId'].currentValue;
+    }
+  }
+
   private getRecetas() {
-    this.recetaService.getRecetas(this.receta_id)
+    this.recetaService.getRecetas(this.idCat)
       .subscribe({
         next: (data) => {
+          console.log("Llega el idCat, " + this.idCat)
           this.recetasSignal.set(data.content);
         },
         error: (err) => {
