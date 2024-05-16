@@ -1,0 +1,20 @@
+<div class="card-container">
+    <article class="card-subscribe">
+        <div class="card-body">
+            <header>
+                <h3>{{suscripcion.nombre}}</h3>
+            </header>
+            <div class="card-product-info">
+                <p class="receta-info">{{suscripcion.cantRecetas}} Recetas</p>
+                <p class="personas-info">{{suscripcion.cantPersonas}} Personas</p>
+            </div>
+            <div class="card-footer-price">
+                <span>{{suscripcion.precio}}</span>
+            </div>
+        </div>
+    </article>
+    <div class="button-container">
+        <input type="radio" name="suscripcion" (change)="seleccionarSuscripcion()">
+    </div>
+</div>
+
