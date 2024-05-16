@@ -1,0 +1,35 @@
+<section class="section-suscripcion">
+    <div class="container-body-suscripcion">
+        <div class="title-container">
+            <h1>Elegí tu Suscripción</h1>
+            <h3>Podes cambiar o cancelar cuando quieras</h3>
+        </div>
+        <div class="container-card-suscripcion">
+            <div class="card-slider-container">
+              <div class="card-slider-wrapper">
+                <div class="card-slider">
+                  @for (suscripcion of suscripciones(); track suscripcion) {
+                    <app-card-suscribirse
+                      [suscripcion]="suscripcion"
+                      (precioSeleccionado)="seleccionarPrecio($event)"
+                      />
+                  }
+                
+                </div>
+              </div>
+            </div>
+          </div>
+        <div class="container-info">
+            <p> Recetas nuevas cada semana.
+                Después de finalizar tu pedido, puedes escoger entre muchas opciones deliciosas.</p>
+        </div>
+        <div>
+            <button class="btn-suscribir">
+              <button class="btn-suscribir" (click)="inicializarPayPalButton()">
+                Suscríbete ahora
+              </button>
+              <div id="paypal-button-container"></div>
+            </button>
+        </div>
+    </div>
+</section>

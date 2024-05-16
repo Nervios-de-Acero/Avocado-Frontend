@@ -1,0 +1,53 @@
+<section class="vista-detail-container">
+    <div class="detail-container">
+        <div class="img-container">
+            <figure class="img-detail">
+                <img src="../.../../../../assets/imagenes/vista-superior-mistura-de-ingredientes.jpg" alt="">
+            </figure>
+        </div>
+        <div class="info-container">
+            <h1>{{recetaDetail()?.titulo}}</h1>
+            <div>
+               <p class="description-info">{{recetaDetail()?.descripcion}}</p>
+               <div class="icons-details-container">
+                    <div class="details-info-container">
+                        <figure class="timer-info-icon">
+                            <img src="../../../assets/iconos/icon-reloj.png" alt="">
+                        </figure>
+                        <span>{{recetaDetail()?.tiempoCoccion}}</span>
+                    </div>
+                    <div class="details-info-container">
+                        <figure class="cook-info-icon">
+                            <img src="../../../assets/iconos/icon-batidor.png" alt="">
+                        </figure>
+                        <span>{{recetaDetail()?.dificultad}}</span>
+                    </div>
+               </div>
+            </div>
+        </div>
+    </div>
+    <div class="ingredientes-container">
+        <h3>Ingredientes</h3>
+        <div class="ingredientes-list">
+            <div>
+               <ul>
+                @for (ingrediente of recetaDetail()?.ingredientes; track ingrediente) {
+                  <li>{{ingrediente}}</li>
+                }
+               </ul>
+            </div>
+        </div>
+    </div>
+    <div class="pasos-container">
+        <h3>Pasos de Preparación</h3>
+        <div class="pasos-list">
+            <div>
+                <ol>
+                  @for (paso of recetaDetail()?.pasos; track paso) {
+                    <li>{{paso}}</li>
+                  }
+                </ol>
+            </div>
+        </div>
+    </div>
+</section>

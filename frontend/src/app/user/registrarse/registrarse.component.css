@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.register-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    margin-top: 40px;
+}
+
+.register-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #B8E092;
+    padding: 15px;
+}
+
+.register-title{
+    font-family: "Sacramento", cursive;
+    font-weight: 400;
+    text-align: center;
+    font-size: 2.8rem;
+}
+
+.logo-container-app{
+    width: 180px;
+}
+.logo-img{
+    width: 100%;
+    height: auto;
+}
+
+.register-leyend{
+    padding: 10px 0;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.register-container-input{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.register-container-input input{
+    padding: 15px;
+    background-color: #D9D9D9;
+    border: none;
+    width: 100%;
+
+    &.is-valid{
+      border: 2px solid #B8E092;
+    }
+
+    &.is-invalid{
+      border: 2px solid red;
+    }
+}
+
+.register-container-input span {
+  color: red;
+}
+
+.register-container-input input::placeholder{
+    color: #6D6868;
+}
+
+.btn-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+.btn-register{
+    width: 137px;
+    height: 45px;
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 20px;
+    color:  #FDFFEB;
+    background-color: #B8E092;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+.btn-register:hover{
+    background-color: #3C5B27;
+    transform: scale(1.1);
+}
+
+.span-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+.span-register{
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+.section-login{
+    padding: 40px 0;
+}
+.login-container{
+    display: flex;
+    justify-content: center;
+    border: 1px solid #B8E092;
+    padding: 10px;
+    font-size: 0.9rem;
+}
+.login-container a{
+    color: #1656FA;
+    font-weight: 500;
+    text-decoration: none;
+    padding-left: 10px;
+}
+.login-container a:hover{
+    cursor: pointer;
+    color: #3C5B27;
+    position:relative;
+}
+.login-container a::before{
+    content:"";
+    display:block;
+    position:absolute;
+    bottom:-7px;
+    left:0;
+    width:100%;
+    height:2px;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+    background-color: #3C5B27;
+    transform-origin: 50% 0%;
+}
+.login-container a:hover::before{
+    transform: scaleX(1);
+}
+
+.container-span-download{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    font-size: 0.95rem;
+}
+.download-icon-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    width: 270px;
+}
+.download-icon{
+    width: 100%;
+    height: auto;
+}
+
+.section-contacto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.section-contacto-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.icon-container-contacto{
+    width: 60px;
+}
+.icon-contacto{
+    width: 100%;
+    height: auto;
+}
+.contacto-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.8rem;
+}
+.span-contacto{
+    padding: 5px 0;
+}
+.contacto-link{
+    padding: 5px 0;
+    color: #3C5B27;
+    text-decoration: none;
+    font-size: 1rem;
+    position:relative;
+}
+.contacto-link:hover{
+    cursor: pointer;
+    color: #1656FA;
+    position:relative;
+    font-weight: 600;
+}
+.contacto-link::before{
+    content:"";
+    display:block;
+    position:absolute;
+    bottom:-7px;
+    left:0;
+    width:100%;
+    height:2px;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+    background-color: #1656FA;
+    transform-origin: 50% 0%;
+}
+.contacto-link:hover::before{
+    transform: scaleX(1);
+}
+
+@media (min-width: 768px) {
+    .register-container{
+        width: 450px;
+    }
+    .login-container{
+        width: 450px;
+    }
+
+    .section-download-app{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+   .icon-container-contacto{
+        width: 70px;
+   }
+   .container-icon{
+    display: flex;
+   }
+
+   .section-contacto{
+    align-items: flex-end;
+   }
+}
