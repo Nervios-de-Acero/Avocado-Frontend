@@ -2,12 +2,12 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule} from '@angular/common/http';
-import { Router } from '@angular/router';
+import { Router, RouterLinkWithHref } from '@angular/router';
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [FormsModule, HttpClientModule],
+  imports: [FormsModule, HttpClientModule, RouterLinkWithHref],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
