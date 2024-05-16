@@ -23,8 +23,7 @@ export class VistaRecetaComponent {
       this.recetaService.getOne(this.id)
       .subscribe({
         next: (data) => {
-          // Debido a que llega un objeto, seleccionamos el content y el item 0 (el unico), para acceder a los elementos de dicha receta.
-          this.recetaDetail.set(data.content[0]);
+          this.recetaDetail.set(data.content);
         }
       })
     }

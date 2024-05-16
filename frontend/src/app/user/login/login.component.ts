@@ -26,6 +26,7 @@ export class LoginComponent {
         if (res.message == "Sesión iniciada") {
           alert("Login exitoso");
           localStorage.setItem('angularToken', res.token)
+          localStorage.setItem('user', JSON.stringify(res.user))
           this.router.navigateByUrl('/feed')
         } else {
           alert("Error en el login: " + res.message);
@@ -39,7 +40,7 @@ export class LoginComponent {
         } else {
           // El backend devolvió un código de error.
           console.error(
-          
+
             `Error en la solicitud: ${error.status}, ` +
             `Mensaje: ${error.error.message}`);
           this.errorMessage = error.error.message;
