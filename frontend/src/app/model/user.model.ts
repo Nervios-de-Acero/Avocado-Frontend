@@ -6,3 +6,4 @@ export interface User {
   password?: string
 }
 
+export interface UserDTO extends Omit<User, "idUsuario">{}
