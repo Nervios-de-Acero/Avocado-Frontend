@@ -3,14 +3,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 205px;
     margin: 30px;
 }
 
 .card-subscribe{
     display: flex;
     flex-direction: column;
-    width: 200px;
+    width: 180px;
     height: auto;
     border: 1px solid #B8E092;
     border-radius: 20px;
@@ -54,12 +53,8 @@
 }
 
 @media screen and (min-width: 768px) {
-    .card-container{
-        width: 285px;
-    }
-
     .card-subscribe {
-        width: 280px; /* Cambiar el ancho máximo para tablets */
+        width: 230px; /* Cambiar el ancho máximo para tablets */
     }
 
     .receta-info, .personas-info{
@@ -82,22 +77,18 @@
 }
 
 @media screen and (min-width: 1440px) {
-    .card-container{
-        width: 495px;
-    }
-
     .card-subscribe {
-        width: 480px; /* Cambiar el ancho máximo para tablets */
+        width: 250px;
     }
 
     .receta-info, .personas-info{
-        font-size: 2.5rem;
+        font-size: 1.3rem;
         padding: 30px 10px;
     }
 
     .card-body header, .card-footer-price{
-        font-size: 2.5rem;
-        padding: 35px 0;
+        font-size: 1.4rem;
+        padding: 25px 0;
     }
 
     .button-container{
@@ -105,7 +96,7 @@
     }
 
     .button-container input{
-        width: 200px; 
-        height: 40px;  
+        width: 180px; 
+        height: 30px;  
     }
 }

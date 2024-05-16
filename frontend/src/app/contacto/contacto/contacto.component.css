@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 50px 30px;
+    padding: 90px 30px 60px;
 }
 
 .container-contact h1{
@@ -92,5 +92,19 @@ form{
     }
     .container-contact h3{
         font-size: 1rem;
+    }
+    .register-container-input {
+        width: 450px;
+    }
+
+    .register-container-input input{
+        padding: 20px 15px;
+    }
+    .register-container-input input::placeholder{
+        font-size: 1rem;
+    }
+    .register-container-input textarea::placeholder{
+        font-size: 1rem;
+        height: 70px;
     }
 }
