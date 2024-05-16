@@ -3,7 +3,7 @@ export interface User {
   nombreCompleto: string,
   usuario: string,
   email: string,
-  password: string
+  password?: string
 }
 
 export interface UserDTO extends Omit<User, "idUsuario">{}

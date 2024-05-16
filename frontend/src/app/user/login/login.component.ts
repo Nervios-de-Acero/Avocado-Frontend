@@ -2,12 +2,12 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule} from '@angular/common/http';
-import { Router } from '@angular/router';
+import { Router, RouterLinkWithHref } from '@angular/router';
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [FormsModule, HttpClientModule],
+  imports: [FormsModule, HttpClientModule, RouterLinkWithHref],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
@@ -26,6 +26,7 @@ export class LoginComponent {
         if (res.message == "Sesión iniciada") {
           alert("Login exitoso");
           localStorage.setItem('angularToken', res.token)
+          localStorage.setItem('user', JSON.stringify(res.user))
           this.router.navigateByUrl('/feed')
         } else {
           alert("Error en el login: " + res.message);
@@ -39,7 +40,7 @@ export class LoginComponent {
         } else {
           // El backend devolvió un código de error.
           console.error(
-          
+
             `Error en la solicitud: ${error.status}, ` +
             `Mensaje: ${error.error.message}`);
           this.errorMessage = error.error.message;

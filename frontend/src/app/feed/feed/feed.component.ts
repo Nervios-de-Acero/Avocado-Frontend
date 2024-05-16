@@ -19,8 +19,6 @@ export class FeedComponent {
   recetasSignal = signal<Receta[]>([]);
 
   private recetaService = inject(RecetaService);
-  @Input() categoriaId!: number;
-  idCat!: number;
 
   ngOnInit(){
     if (!this.authService.isLoggedIn()) {
@@ -31,18 +29,10 @@ export class FeedComponent {
   }
 
 
-
-  ngOnChanges(changes: SimpleChanges) {
-    if (changes['categoriaId']?.currentValue !== undefined) {
-      this.idCat = changes['categoriaId'].currentValue;
-    }
-  }
-
   private getRecetas() {
-    this.recetaService.getRecetas(this.idCat)
+    this.recetaService.getRecetas()
       .subscribe({
         next: (data) => {
-          console.log("Llega el idCat, " + this.idCat)
           this.recetasSignal.set(data.content);
         },
         error: (err) => {

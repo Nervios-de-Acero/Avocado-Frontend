@@ -1,4 +1,4 @@
-import { Component, signal, inject, Output, EventEmitter, SimpleChanges, Input } from '@angular/core';
+import { Component, signal, inject, Output, EventEmitter } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router, RouterOutlet, RouterLinkWithHref } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
@@ -24,13 +24,6 @@ export class LayoutComponent {
 
   ngOnInit(){
     this.getCategorias()
-  }
-
-  onCategoryChange(event: Event) {
-    const seleccionCategoriaId = parseInt((event.target as HTMLSelectElement).value);
-      console.log("Valor del selected " + seleccionCategoriaId )
-      console.log("Y el tipo es  " + typeof(seleccionCategoriaId))
-      this.idCategoriaElegido.emit(seleccionCategoriaId);
   }
 
 

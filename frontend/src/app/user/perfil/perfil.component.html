@@ -8,21 +8,21 @@
         </div>
         <div class="container-data">
             <div class="userName-data">
-                <p class="nameUser">Nombre y Apellido</p>
-                <p class="userName">nombreUsuario</p>
+                <p class="nameUser">{{userInfo.nombreCompleto}}</p>
+                <p class="userName">{{userInfo.usuario}}</p>
             </div>
             <div class="editar-icons">
                 <img class="icon-pen" src="../../../assets/iconos/icons-lapiz.png" alt="icono de lapiz">
-                <img class="icon-pen" src="../../../assets/iconos/icons-lapiz.png" alt="icono de lapiz">        
+                <img class="icon-pen" src="../../../assets/iconos/icons-lapiz.png" alt="icono de lapiz">
             </div>
-        </div>  
+        </div>
     </div>
     <div class="container-email-password">
         <div class="input-container email">
-            <label for="email">Correo electrónico</label>
+            <label for="email">{{userInfo.email}}</label>
             <input type="email" id="email">
         </div>
-        <div class="group-container-password">       
+        <div class="group-container-password">
             <div class="group-input-icon">
                 <div class="input-container">
                     <label for="password">Contraseña actual</label>
@@ -39,18 +39,18 @@
                 </div>
                 <div class="icon-pen-eye">
                     <figure class="icon-eye">
-                        <img class="icon-pen icon-change-password" src="../../../assets/iconos/icon-ojo.png" alt="icono de ojo">                   
-                    </figure> 
+                        <img class="icon-pen icon-change-password" src="../../../assets/iconos/icon-ojo.png" alt="icono de ojo">
+                    </figure>
                     <figure class="icon-eye">
                         <img class="icon-pen pen-password" src="../../../assets/iconos/icons-lapiz.png" alt="icono de lapiz">
                     </figure>
                 </div>
-            </div>                          
+            </div>
         </div>
         <div class="btn-delete-conainer">
             <button class="btn_delete">Eliminar cuenta</button>
         </div>
-    </div> 
+    </div>
     <div class="horizontal-line"></div>
     <div class="container-confirm-cancel">
         <figure class="icon-confirm">
@@ -58,6 +58,6 @@
         </figure>
         <figure class="icon-cancel">
             <img src="../../../assets/iconos/icon-cancelar.png" alt="icono de cancelar">
-        </figure>   
+        </figure>
     </div>
 </section>
