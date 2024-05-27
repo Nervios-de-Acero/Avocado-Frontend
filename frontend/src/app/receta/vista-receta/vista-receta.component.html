@@ -32,7 +32,7 @@
             <div>
                <ul>
                 @for (ingrediente of recetaDetail()?.ingredientes; track ingrediente) {
-                  <li>{{ingrediente}}</li>
+                  <li class="ingrediente-item">{{ingrediente}}</li>
                 }
                </ul>
             </div>
@@ -44,7 +44,7 @@
             <div>
                 <ol>
                   @for (paso of recetaDetail()?.pasos; track paso) {
-                    <li>{{paso}}</li>
+                    <li class="paso-item">{{paso}}</li>
                   }
                 </ol>
             </div>
