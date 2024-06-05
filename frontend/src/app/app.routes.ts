@@ -8,6 +8,7 @@ import { PerfilComponent } from './user/perfil/perfil.component';
 import { SuscribirseComponent } from './suscribirse/suscribirse/suscribirse.component';
 import { ContactoComponent } from './contacto/contacto/contacto.component';
 import { SobreNosotrosComponent } from './acerca-de/sobre-nosotros/sobre-nosotros.component';
+import { ContactoNLComponent } from './contacto/contacto-nl/contacto-nl.component';
 
 export const routes: Routes = [
     {
@@ -22,6 +23,10 @@ export const routes: Routes = [
     {
         path: 'registrarse',
         component: RegistrarseComponent
+    },
+    {
+        path: 'contactanos',
+        component: ContactoNLComponent
     },
     {
         path:'',
