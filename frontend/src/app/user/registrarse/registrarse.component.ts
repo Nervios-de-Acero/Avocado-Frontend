@@ -4,12 +4,12 @@ import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angula
 import { UserService } from '../../services/user.service';
 import {UserDTO } from '../../model/user.model';
 import { MyValidators } from '../../utils/validators';
-import { Router } from '@angular/router';
+import { Router, RouterLinkWithHref } from '@angular/router';
 
 @Component({
   selector: 'app-registrarse',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule],
+  imports: [CommonModule, ReactiveFormsModule, RouterLinkWithHref],
   templateUrl: './registrarse.component.html',
   styleUrl: './registrarse.component.css'
 })

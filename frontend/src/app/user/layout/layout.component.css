@@ -202,9 +202,13 @@ footer {
     display: flex;
     justify-content: flex-end;
     padding: 10px 30px;
+    gap: 15px;
 }
 .contact-icon-container{
     width: 40px;
+}
+.android-icon{
+    width: 100px;
 }
 .contact-icon-container img{
     width: 100%;

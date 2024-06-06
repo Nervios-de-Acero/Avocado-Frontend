@@ -240,4 +240,8 @@
    .section-contacto{
     align-items: flex-end;
    }
+
+   .link-android{
+    width: 150px;
+   }
 }

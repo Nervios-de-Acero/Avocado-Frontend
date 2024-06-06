@@ -243,6 +243,10 @@
    .section-contacto{
     align-items: flex-end;
    }
+
+   .link-android{
+    width: 150px;
+   }
 }
 
 @media (min-width: 1024px){

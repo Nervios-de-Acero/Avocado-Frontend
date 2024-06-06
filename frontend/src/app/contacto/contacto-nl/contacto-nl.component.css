@@ -3,7 +3,18 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 90px 30px 60px;
+    padding: 60px 30px 60px;
+}
+
+.logo-icon{
+    width: 200px;
+    height: 200px;
+    padding: 0 10px 40px;
+}
+
+.logo-icon  img{
+    width: 100%;
+    height: auto;
 }
 
 .container-contact h1{
@@ -72,6 +83,25 @@ form{
 .btn-register:hover{
     background-color: #3C5B27;
     transform: scale(1.1);
+}
+
+.links-container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.links-container a{
+    color: #3C5B27;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+.links-container a:hover{
+    transform: scale(1.1);
+    color: rgb(4, 0, 255);
+    text-decoration: underline;
 }
 
 @media (min-width: 767px) {
